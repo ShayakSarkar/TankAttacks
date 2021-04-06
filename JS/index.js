@@ -7,8 +7,11 @@ let bgCanvas     = document.getElementById("bgCanvas"),
 let bgImg = new Image();
     bgImg.onload = function() {
         ctxBg.drawImage(bgImg, 0, 0);
+        //ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
     }
     bgImg.src = 'Assets/Sand.png';
+    
+    
 //console.log(typeof(bgImg));
 
 // some code
