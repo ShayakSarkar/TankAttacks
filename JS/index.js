@@ -9,16 +9,37 @@ let bgCanvas        = document.getElementById("bgCanvas"),
 //         ctxBg.drawImage(bgImg, 0, 0);
 //         //ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
 //     }
-//     bgImg.src = 'Assets/Sand.png';
+//     bgImg.src = 'Assets/tb.svg';
 
 class Player {
-    constructor() {
-        this.x
+    constructor(color) {
+        this.color = color;
+        let tankImg = new Image();
+        if(color == 'red') {
+            tankImg.src = 'Assets/tr.svg';
+            this.src = 'Assets/tr.svg';
+            this.x = 0;
+            this.y = bgCanvas.height/2;
+        }
+        else {
+            tankImg.src = 'Assets/tb.svg';
+            this.src = 'Assets/tb.svg';
+            this.x = bgCanvas.width - 300;
+            this.y = bgCanvas.height/2;
+        }
+        let posx = this.x, posy = this.y;
+        tankImg.onload = function() {
+            ctxBg.drawImage(tankImg, posx, posy);
+            //console.log(this.src, posx, posy);
+        }
     }
 }
-    
-    
-//console.log(typeof(bgImg));
+
+const playerRed = new Player('red');
+const playerBlu = new Player('blu');
+
+console.log(playerRed);
+console.log(playerBlu);
 
 // some code
 // var red_tank=document.getElementById("red_tank");
