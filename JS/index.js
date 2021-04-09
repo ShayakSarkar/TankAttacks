@@ -1,15 +1,21 @@
 // background canvas
-let bgCanvas     = document.getElementById("bgCanvas"),
-    ctxBg        = bgCanvas.getContext("2d");
-    canvasWidth  = bgCanvas.width;
-    canvasHeight = bgCanvas.height; 
+let bgCanvas        = document.getElementById("bgCanvas"),
+    ctxBg           = bgCanvas.getContext("2d");
+    bgCanvas.width  = innerWidth;
+    bgCanvas.height = innerHeight; 
 
-let bgImg = new Image();
-    bgImg.onload = function() {
-        ctxBg.drawImage(bgImg, 0, 0);
-        //ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
+// let bgImg = new Image();
+//     bgImg.onload = function() {
+//         ctxBg.drawImage(bgImg, 0, 0);
+//         //ctxBg.clearRect(0, 0, canvasWidth, canvasHeight);
+//     }
+//     bgImg.src = 'Assets/Sand.png';
+
+class Player {
+    constructor() {
+        this.x
     }
-    bgImg.src = 'Assets/Sand.png';
+}
     
     
 //console.log(typeof(bgImg));
